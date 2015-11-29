@@ -5,7 +5,7 @@
     <ImageButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/main"
+        android:id="@+id/info"
         android:background="@android:color/transparent"
         android:adjustViewBounds="true" />
 
