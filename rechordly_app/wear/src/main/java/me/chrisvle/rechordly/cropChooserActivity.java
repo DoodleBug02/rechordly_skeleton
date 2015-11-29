@@ -11,7 +11,7 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-public class doneActivity extends Activity {
+public class cropChooserActivity extends Activity {
 
     private TextView mTextView;
     private ImageButton mImageButton;
@@ -21,7 +21,7 @@ public class doneActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_done);
+        setContentView(R.layout.activity_crop_chooser);
         final WatchViewStub stub = (WatchViewStub) findViewById(R.id.watch_view_stub);
         stub.setOnLayoutInflatedListener(new WatchViewStub.OnLayoutInflatedListener() {
             @Override
@@ -54,7 +54,7 @@ public class doneActivity extends Activity {
             @Override
             public boolean onSingleTapConfirmed(MotionEvent event) {
                 Log.d("Event: ", "onSingleTapEvent Fired!");
-                Intent intent = new Intent(getBaseContext(), SaveRetryActivity.class);
+                Intent intent = new Intent(getBaseContext(), CropActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
                 return true;
@@ -64,16 +64,16 @@ public class doneActivity extends Activity {
             public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX,
                                     float distanceY) {
                 Log.d(DEBUG_TAG, "onScroll: Distance: " + String.valueOf(distanceX) + ", " + String.valueOf(distanceY));
-//                if (distanceX > 5.0) {
-//                    Log.d("Event: ", "onScrollEvent Fired!");
-//                    Intent intent = new Intent(getBaseContext(), doneActivity.class);
-//                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-//                    startActivity(intent);
-//                    return true;
-//                }
+                if (distanceX > 5.0) {
+                    Log.d("Event: ", "onScrollEvent Fired!");
+                    Intent intent = new Intent(getBaseContext(), VolumeChooserActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(intent);
+                    return true;
+                }
                 if (distanceX < -5.0) {
                     Log.d("Event: ", "onScrollEvent Fired!");
-                    Intent intent = new Intent(getBaseContext(), EffectsChooserActivity.class);
+                    Intent intent = new Intent(getBaseContext(), WatchMain.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
                     return true;
@@ -84,4 +84,9 @@ public class doneActivity extends Activity {
         });
     }
 
+    // Capture long presses / scrolls
+    @Override
+    public boolean onTouchEvent(MotionEvent ev) {
+        return mDetector.onTouchEvent(ev) || super.onTouchEvent(ev);
+    }
 }
