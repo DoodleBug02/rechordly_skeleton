@@ -7,14 +7,14 @@ import android.support.wearable.view.WatchViewStub;
 import android.view.View;
 import android.widget.TextView;
 
-public class RecordActivity extends Activity {
+public class StopActivity extends Activity {
 
     private TextView mTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_record);
+        setContentView(R.layout.activity_stop);
         final WatchViewStub stub = (WatchViewStub) findViewById(R.id.watch_view_stub);
         stub.setOnLayoutInflatedListener(new WatchViewStub.OnLayoutInflatedListener() {
             @Override
@@ -24,8 +24,8 @@ public class RecordActivity extends Activity {
         });
     }
 
-    public void goToStopActivity(View view) {
-        Intent intent = new Intent(this, StopActivity.class);
+    public void goToWatchMain(View view) {
+        Intent intent = new Intent(this, WatchMain.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
         this.overridePendingTransition(0, 0);
