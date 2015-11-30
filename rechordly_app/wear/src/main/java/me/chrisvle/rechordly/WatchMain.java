@@ -8,6 +8,7 @@ import android.support.wearable.view.WatchViewStub;
 import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
+import android.view.View;
 import android.widget.TextView;
 
 public class WatchMain extends Activity {
@@ -61,5 +62,12 @@ public class WatchMain extends Activity {
     @Override
     public boolean onTouchEvent(MotionEvent ev) {
         return mDetector.onTouchEvent(ev) || super.onTouchEvent(ev);
+    }
+
+    public void goStop(View view) {
+        Intent intent = new Intent(this, StopActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+        this.overridePendingTransition(0, 0);
     }
 }
