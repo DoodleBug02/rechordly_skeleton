@@ -6,9 +6,8 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:id="@+id/lyrics"
-        android:src="@drawable/home"
+        android:src="@drawable/lyrics"
         android:clickable="true"/>
-
 
 </LinearLayout>
 
