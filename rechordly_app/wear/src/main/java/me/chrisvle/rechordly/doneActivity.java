@@ -28,6 +28,7 @@ public class doneActivity extends Activity {
             public void onLayoutInflated(WatchViewStub stub) {
                 mTextView = (TextView) stub.findViewById(R.id.text);
                 mImageButton = (ImageButton) stub.findViewById(R.id.imageButton);
+                mImageButton.setImageResource(R.drawable.done_nav);
                 mImageButton.setOnTouchListener(new View.OnTouchListener() {
                     @Override
                     public boolean onTouch(View v, MotionEvent event) {
@@ -64,16 +65,16 @@ public class doneActivity extends Activity {
             public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX,
                                     float distanceY) {
                 Log.d(DEBUG_TAG, "onScroll: Distance: " + String.valueOf(distanceX) + ", " + String.valueOf(distanceY));
-//                if (distanceX > 5.0) {
-//                    Log.d("Event: ", "onScrollEvent Fired!");
-//                    Intent intent = new Intent(getBaseContext(), doneActivity.class);
-//                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-//                    startActivity(intent);
-//                    return true;
-//                }
+                if (distanceX > 5.0) {
+                    Log.d("Event: ", "onScrollEvent Fired!");
+                    Intent intent = new Intent(getBaseContext(), cropChooserActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(intent);
+                    return true;
+                }
                 if (distanceX < -5.0) {
                     Log.d("Event: ", "onScrollEvent Fired!");
-                    Intent intent = new Intent(getBaseContext(), EffectsChooserActivity.class);
+                    Intent intent = new Intent(getBaseContext(), WatchMain.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
                     return true;

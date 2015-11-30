@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-public class CropActivity extends Activity {
+public class EchoAutoActivity extends Activity {
 
     private TextView mTextView;
     private ImageButton mImageButton;
@@ -16,18 +16,18 @@ public class CropActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_crop);
+        setContentView(R.layout.activity_echo_auto);
         final WatchViewStub stub = (WatchViewStub) findViewById(R.id.watch_view_stub);
         stub.setOnLayoutInflatedListener(new WatchViewStub.OnLayoutInflatedListener() {
             @Override
             public void onLayoutInflated(WatchViewStub stub) {
                 mTextView = (TextView) stub.findViewById(R.id.text);
                 mImageButton = (ImageButton) stub.findViewById(R.id.imageButton);
-                mImageButton.setImageResource(R.drawable.crop_screen);
+                mImageButton.setBackgroundResource(R.drawable.volume_screen);
                 mImageButton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(v.getContext(), cropChooserActivity.class);
+                        Intent intent = new Intent(v.getContext(), EffectsChooserActivity.class);
                         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(intent);
                     }

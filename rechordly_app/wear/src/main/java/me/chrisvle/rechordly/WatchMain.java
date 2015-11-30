@@ -47,7 +47,7 @@ public class WatchMain extends Activity {
                                     float distanceY) {
                 Log.d(DEBUG_TAG, "onScroll: Distance: " + String.valueOf(distanceX) + ", " + String.valueOf(distanceY));
                 if (distanceX > 5.0) {
-                    Intent intent = new Intent(getBaseContext(), cropChooserActivity.class);
+                    Intent intent = new Intent(getBaseContext(), doneActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
                 }
