@@ -19,4 +19,7 @@
     <string name="title_activity_effects_chooser">EffectsChooserActivity</string>
     <string name="title_activity_effects">EffectsActivity</string>
     <string name="long_press_intro">Long Press Intro</string>
+    <string name="title_activity_home_vocals_music">HomeVocalsMusicActivity</string>
+    <string name="title_activity_record">RecordActivity</string>
+    <string name="title_activity_stop">StopActivity</string>
 </resources>

@@ -24,10 +24,23 @@
         android:layout_centerHorizontal="true" />
 
     <TextView
-        android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Save"
+        android:id="@+id/textView20"
+        android:layout_above="@+id/imageButtonRetry"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="Save Retry Chooser" />
+        android:layout_marginBottom="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Retry"
+        android:id="@+id/textView21"
+        android:layout_alignBottom="@+id/imageButtonRetry"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="38dp" />
+
 </RelativeLayout>
