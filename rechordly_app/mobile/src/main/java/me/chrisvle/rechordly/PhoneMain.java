@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.ImageView;
 
 public class PhoneMain extends AppCompatActivity {
@@ -34,14 +35,15 @@ public class PhoneMain extends AppCompatActivity {
             }
         });
 
-//        Button b = (Button)findViewById(R.id.add);
-//        b.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent info = new Intent(getBaseContext(), INSERT_WATCH_MESSAGE_HERE.class);
-//                startActivity(info);
-//            }
-//        });
+        Button b = (Button)findViewById(R.id.add);
+        b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent openMain = new Intent(v.getContext(), MessageSender.class);
+                openMain.putExtra("START", "main");
+                startService(openMain);
+            }
+        });
     }
 
     @Override
