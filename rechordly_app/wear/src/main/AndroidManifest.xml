@@ -15,34 +15,36 @@
 
         <activity
             android:name=".WatchMain"
-            android:label="@string/app_name">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            android:label="@string/app_name" >
         </activity>
         <activity
             android:name=".doneActivity"
-            android:label="@string/title_activity_done" />
+            android:label="@string/title_activity_done">
+        </activity>
         <activity
             android:name=".cropChooserActivity"
-            android:label="@string/title_activity_crop_chooser" />
+            android:label="@string/title_activity_crop_chooser">
+        </activity>
         <activity
             android:name=".VolumeChooserActivity"
-            android:label="@string/title_activity_volume_chooser" />
+            android:label="@string/title_activity_volume_chooser">
+        </activity>
         <activity
             android:name=".CropActivity"
-            android:label="@string/title_activity_crop" />
+            android:label="@string/title_activity_crop">
+        </activity>
         <activity
             android:name=".VolumeActivity"
-            android:label="@string/title_activity_volume" />
+            android:label="@string/title_activity_volume">
+        </activity>
         <activity
             android:name=".SaveRetryActivity"
-            android:label="@string/title_activity_save_retry" />
+            android:label="@string/title_activity_save_retry">
+        </activity>
         <activity
             android:name=".EffectsChooserActivity"
-            android:label="@string/title_activity_effects_chooser" />
+            android:label="@string/title_activity_effects_chooser">
+        </activity>
         <activity
             android:name=".EffectsActivity"
             android:label="@string/title_activity_effects" />
@@ -58,6 +60,34 @@
         <activity
             android:name=".NameActivity"
             android:label="@string/title_activity_name">
+            android:label="@string/title_activity_effects" >
+        </activity>
+        <activity
+            android:name=".HomeVocalsMusicActivity"
+            android:label="@string/title_activity_home_vocals_music" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".RecordActivity"
+            android:label="@string/title_activity_record" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".StopActivity"
+            android:label="@string/title_activity_stop" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 

@@ -23,4 +23,7 @@
     <string name="title_activity_echo_auto">EchoAutoActivity</string>
     <string name="title_activity_front_back_chooser">FrontBackChooserActivity</string>
     <string name="title_activity_name">NameActivity</string>
+    <string name="title_activity_home_vocals_music">HomeVocalsMusicActivity</string>
+    <string name="title_activity_record">RecordActivity</string>
+    <string name="title_activity_stop">StopActivity</string>
 </resources>
