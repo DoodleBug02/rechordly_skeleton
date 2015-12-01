@@ -34,7 +34,7 @@ public class SaveActivity extends Activity {
                             }
                             public void onFinish() {
 //                        mTextField.setText("done!");
-                                Intent intent = new Intent(getBaseContext(), WatchMain.class);
+                                Intent intent = new Intent(getBaseContext(), HomeVocalsMusicActivity.class);
                                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                 startActivity(intent);
                             }

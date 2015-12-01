@@ -52,7 +52,7 @@ public class FrontBackChooserActivity extends Activity {
             @Override
             public boolean onSingleTapConfirmed(MotionEvent event) {
                 Log.d("Event: ", "onSingleTapEvent Fired!");
-                Intent intent = new Intent(getBaseContext(), EffectsActivity.class);
+                Intent intent = new Intent(getBaseContext(), CropActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
                 return true;
@@ -71,7 +71,7 @@ public class FrontBackChooserActivity extends Activity {
 //                }
                 if (distanceX < -5.0) {
                     Log.d("Event: ", "onScrollEvent Fired!");
-                    Intent intent = new Intent(getBaseContext(), VolumeChooserActivity.class);
+                    Intent intent = new Intent(getBaseContext(), cropChooserActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
                     return true;

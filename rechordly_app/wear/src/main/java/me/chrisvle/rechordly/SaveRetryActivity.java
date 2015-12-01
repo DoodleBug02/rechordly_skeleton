@@ -37,7 +37,7 @@ public class SaveRetryActivity extends Activity {
                 mImageButtonRery.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(v.getContext(), WatchMain.class);
+                        Intent intent = new Intent(v.getContext(), HomeVocalsMusicActivity.class);
                         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(intent);
                     }
