@@ -56,11 +56,11 @@
             android:label="@string/title_activity_echo_auto" />
         <activity
             android:name=".FrontBackChooserActivity"
-            android:label="@string/title_activity_front_back_chooser"></activity>
+            android:label="@string/title_activity_front_back_chooser">
+        </activity>
         <activity
             android:name=".NameActivity"
             android:label="@string/title_activity_name">
-            android:label="@string/title_activity_effects" >
         </activity>
         <activity
             android:name=".HomeVocalsMusicActivity"
@@ -74,21 +74,19 @@
         <activity
             android:name=".RecordActivity"
             android:label="@string/title_activity_record" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".StopActivity"
             android:label="@string/title_activity_stop" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
+
+        <service
+            android:name=".WatchListener"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.google.android.gms.wearable.BIND_LISTENER" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>
