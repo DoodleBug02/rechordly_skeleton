@@ -1,1 +1,1 @@
-include ':mobile', ':wear', ':rechordly'
+include ':mobile', ':wear'
