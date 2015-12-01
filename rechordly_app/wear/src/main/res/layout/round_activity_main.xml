@@ -13,8 +13,8 @@
         android:layout_centerHorizontal="true" />
 
     <ImageButton
-        android:layout_width="150px"
-        android:layout_height="150px"
+        android:layout_width="100px"
+        android:layout_height="100px"
         android:id="@+id/ResumeButton"
         android:background="@android:color/transparent"
         android:layout_centerVertical="true"

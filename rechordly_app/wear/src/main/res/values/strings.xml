@@ -26,4 +26,6 @@
     <string name="title_activity_home_vocals_music">HomeVocalsMusicActivity</string>
     <string name="title_activity_record">RecordActivity</string>
     <string name="title_activity_stop">StopActivity</string>
+    <string name="title_activity_playback">PlaybackActivity</string>
+    <string name="title_activity_pause">PauseActivity</string>
 </resources>
