@@ -35,15 +35,16 @@ public class InfoActivity extends AppCompatActivity {
             }
         });
 
-//        Button edit = (Button) findViewById(R.id.edit);
-//
-//        edit.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent lyrics = new Intent(getBaseContext(), INSERT_WATCH_MESSAGE22_HERE.class);
-//                startActivity(lyrics);
-//            }
-//        });
+        Button edit = (Button) findViewById(R.id.edit);
+
+        edit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent openMain = new Intent(v.getContext(), MessageSender.class);
+                openMain.putExtra("START", "edit");
+                startService(openMain);
+            }
+        });
     }
 
 }
