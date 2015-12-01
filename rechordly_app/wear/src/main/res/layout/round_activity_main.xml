@@ -2,6 +2,7 @@
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:background="@drawable/resume_recording"
     android:layout_height="match_parent" tools:context=".MainActivity" tools:deviceIds="wear_round">
 
     <android.support.wearable.view.DismissOverlayView
@@ -12,38 +13,12 @@
         android:layout_centerHorizontal="true" />
 
     <ImageButton
-        android:layout_width="150px"
-        android:layout_height="150px"
+        android:layout_width="100px"
+        android:layout_height="100px"
         android:id="@+id/ResumeButton"
-        android:src="@drawable/resume_button"
+        android:background="@android:color/transparent"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:onClick="goStop"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Swipe Right"
-        android:id="@+id/textView6"
-        android:layout_centerVertical="true"
-        android:layout_toEndOf="@+id/ResumeButton" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Swipe Left"
-        android:id="@+id/textView7"
-        android:layout_alignBottom="@+id/textView6"
-        android:layout_toStartOf="@+id/ResumeButton" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Resume"
-        android:id="@+id/textView5"
-        android:layout_below="@+id/ResumeButton"
-        android:layout_centerHorizontal="true" />
 </RelativeLayout>

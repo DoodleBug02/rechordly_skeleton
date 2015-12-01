@@ -1,41 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:background="@drawable/v_or_m"
     android:layout_height="match_parent"
     tools:context="me.chrisvle.rechordly.HomeVocalsMusicActivity" tools:deviceIds="wear_round">
 
+
     <ImageButton
         android:layout_width="match_parent"
-        android:layout_height="160px"
+        android:layout_height="100px"
         android:id="@+id/VocalsButton"
-        android:layout_alignParentStart="true"
-        android:onClick="goToRecordActivity" />
+        android:background="@android:color/transparent"
+        android:onClick="goToRecordActivity"
+        android:layout_marginTop="46dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
 
     <ImageButton
         android:layout_width="match_parent"
-        android:layout_height="160px"
+        android:layout_height="100px"
         android:id="@+id/MusicButton"
-        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent"
+        android:onClick="goToRecordActivity"
         android:layout_below="@+id/VocalsButton"
-        android:onClick="goToRecordActivity"/>
+        android:layout_alignParentStart="true" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Vocals"
-        android:id="@+id/textView"
-        android:layout_above="@+id/MusicButton"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="37dp" />
+    <android.support.wearable.view.DismissOverlayView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/dismiss_overlay"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Music"
-        android:id="@+id/textView2"
-        android:layout_below="@+id/VocalsButton"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="39dp" />
 </RelativeLayout>
