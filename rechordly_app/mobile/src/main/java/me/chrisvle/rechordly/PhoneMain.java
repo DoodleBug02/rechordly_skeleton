@@ -33,6 +33,15 @@ public class PhoneMain extends AppCompatActivity {
                 startActivity(info);
             }
         });
+
+//        Button b = (Button)findViewById(R.id.add);
+//        b.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent info = new Intent(getBaseContext(), INSERT_WATCH_MESSAGE_HERE.class);
+//                startActivity(info);
+//            }
+//        });
     }
 
     @Override

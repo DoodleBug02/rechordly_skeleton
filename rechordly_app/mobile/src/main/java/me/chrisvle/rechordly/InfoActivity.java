@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.ImageView;
 
 public class InfoActivity extends AppCompatActivity {
@@ -24,13 +25,25 @@ public class InfoActivity extends AppCompatActivity {
         ImageView iv = (ImageView)findViewById(R.id.info);
         iv.setScaleType(ImageView.ScaleType.FIT_XY);
 
-        iv.setOnClickListener(new View.OnClickListener() {
+        Button lyrics = (Button) findViewById(R.id.lyrics);
+
+        lyrics.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent lyrics = new Intent(getBaseContext(), TranscribingActivity.class);
                 startActivity(lyrics);
             }
         });
+
+//        Button edit = (Button) findViewById(R.id.edit);
+//
+//        edit.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent lyrics = new Intent(getBaseContext(), INSERT_WATCH_MESSAGE22_HERE.class);
+//                startActivity(lyrics);
+//            }
+//        });
     }
 
 }
