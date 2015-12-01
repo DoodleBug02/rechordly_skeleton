@@ -8,36 +8,39 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 
-public class SaveRetryActivity extends Activity {
+public class NameActivity extends Activity {
 
-    private ImageButton mImageButton;
-    private ImageButton mImageButtonRery;
+    private ImageButton mImageButtonYes;
+    private ImageButton mImageButtonNo;
     private RelativeLayout mLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_save_retry);
+        setContentView(R.layout.activity_name);
         final WatchViewStub stub = (WatchViewStub) findViewById(R.id.watch_view_stub);
         stub.setOnLayoutInflatedListener(new WatchViewStub.OnLayoutInflatedListener() {
             @Override
             public void onLayoutInflated(WatchViewStub stub) {
-                mImageButton = (ImageButton) stub.findViewById(R.id.imageButton);
-                mLayout = (RelativeLayout) stub.findViewById(R.id.save_retry_layout);
-                mLayout.setBackgroundResource(R.drawable.save_retry);
-                mImageButton.setOnClickListener(new View.OnClickListener() {
+                mImageButtonNo = (ImageButton) stub.findViewById(R.id.imageButtonNo);
+                mImageButtonYes = (ImageButton) stub.findViewById(R.id.imageButtonYes);
+
+                mLayout = (RelativeLayout) stub.findViewById(R.id.name_layout);
+                mLayout.setBackgroundResource(R.drawable.record_name);
+
+                mImageButtonNo.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(v.getContext(), NameActivity.class);
+                        Intent intent = new Intent(v.getContext(), SaveRetryActivity.class);
                         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(intent);
                     }
                 });
-                mImageButtonRery = (ImageButton) stub.findViewById(R.id.imageButtonRetry);
-                mImageButtonRery.setOnClickListener(new View.OnClickListener() {
+
+                mImageButtonYes.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(v.getContext(), HomeVocalsMusicActivity.class);
+                        Intent intent = new Intent(v.getContext(), SaveActivity.class);
                         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(intent);
                     }

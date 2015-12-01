@@ -19,6 +19,10 @@
     <string name="title_activity_effects_chooser">EffectsChooserActivity</string>
     <string name="title_activity_effects">EffectsActivity</string>
     <string name="long_press_intro">Long Press Intro</string>
+    <string name="title_activity_save">SaveActivity</string>
+    <string name="title_activity_echo_auto">EchoAutoActivity</string>
+    <string name="title_activity_front_back_chooser">FrontBackChooserActivity</string>
+    <string name="title_activity_name">NameActivity</string>
     <string name="title_activity_home_vocals_music">HomeVocalsMusicActivity</string>
     <string name="title_activity_record">RecordActivity</string>
     <string name="title_activity_stop">StopActivity</string>

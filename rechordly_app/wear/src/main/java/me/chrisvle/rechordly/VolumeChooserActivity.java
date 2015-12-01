@@ -28,6 +28,7 @@ public class VolumeChooserActivity extends Activity {
             public void onLayoutInflated(WatchViewStub stub) {
                 mTextView = (TextView) stub.findViewById(R.id.text);
                 mImageButton = (ImageButton) stub.findViewById(R.id.imageButton);
+                mImageButton.setImageResource(R.drawable.volume_nav);
                 mImageButton.setOnTouchListener(new View.OnTouchListener() {
                     @Override
                     public boolean onTouch(View v, MotionEvent event) {

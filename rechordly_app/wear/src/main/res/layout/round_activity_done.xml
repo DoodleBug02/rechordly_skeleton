@@ -14,23 +14,4 @@
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Done Button"
-        android:id="@+id/textView18"
-        android:layout_above="@+id/textView17"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="31dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Swipe Left"
-        android:id="@+id/textView17"
-        android:layout_centerVertical="true"
-        android:layout_alignParentStart="true" />
-
 </RelativeLayout>

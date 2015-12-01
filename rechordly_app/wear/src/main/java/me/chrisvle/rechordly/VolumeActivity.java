@@ -23,6 +23,7 @@ public class VolumeActivity extends Activity {
             public void onLayoutInflated(WatchViewStub stub) {
                 mTextView = (TextView) stub.findViewById(R.id.text);
                 mImageButton = (ImageButton) stub.findViewById(R.id.imageButton);
+                mImageButton.setImageResource(R.drawable.volume_screen);
                 mImageButton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {

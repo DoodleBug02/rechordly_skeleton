@@ -9,11 +9,9 @@ import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.TextView;
 
-public class cropChooserActivity extends Activity {
+public class FrontBackChooserActivity extends Activity {
 
-    private TextView mTextView;
     private ImageButton mImageButton;
     private GestureDetector mDetector;
     private static final String DEBUG_TAG = "Gestures";
@@ -21,14 +19,13 @@ public class cropChooserActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_crop_chooser);
+        setContentView(R.layout.activity_front_back_chooser);
         final WatchViewStub stub = (WatchViewStub) findViewById(R.id.watch_view_stub);
         stub.setOnLayoutInflatedListener(new WatchViewStub.OnLayoutInflatedListener() {
             @Override
             public void onLayoutInflated(WatchViewStub stub) {
-                mTextView = (TextView) stub.findViewById(R.id.text);
                 mImageButton = (ImageButton) stub.findViewById(R.id.imageButton);
-                mImageButton.setImageResource(R.drawable.crop_nav);
+                mImageButton.setImageResource(R.drawable.crop_f_b);
                 mImageButton.setOnTouchListener(new View.OnTouchListener() {
                     @Override
                     public boolean onTouch(View v, MotionEvent event) {
@@ -55,7 +52,7 @@ public class cropChooserActivity extends Activity {
             @Override
             public boolean onSingleTapConfirmed(MotionEvent event) {
                 Log.d("Event: ", "onSingleTapEvent Fired!");
-                Intent intent = new Intent(getBaseContext(), FrontBackChooserActivity.class);
+                Intent intent = new Intent(getBaseContext(), CropActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
                 return true;
@@ -65,16 +62,16 @@ public class cropChooserActivity extends Activity {
             public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX,
                                     float distanceY) {
                 Log.d(DEBUG_TAG, "onScroll: Distance: " + String.valueOf(distanceX) + ", " + String.valueOf(distanceY));
-                if (distanceX > 5.0) {
-                    Log.d("Event: ", "onScrollEvent Fired!");
-                    Intent intent = new Intent(getBaseContext(), VolumeChooserActivity.class);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    startActivity(intent);
-                    return true;
-                }
+//                if (distanceX > 5.0) {
+//                    Log.d("Event: ", "onScrollEvent Fired!");
+//                    Intent intent = new Intent(getBaseContext(), doneActivity.class);
+//                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//                    startActivity(intent);
+//                    return true;
+//                }
                 if (distanceX < -5.0) {
                     Log.d("Event: ", "onScrollEvent Fired!");
-                    Intent intent = new Intent(getBaseContext(), doneActivity.class);
+                    Intent intent = new Intent(getBaseContext(), cropChooserActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
                     return true;
@@ -83,11 +80,5 @@ public class cropChooserActivity extends Activity {
                 return false;
             }
         });
-    }
-
-    // Capture long presses / scrolls
-    @Override
-    public boolean onTouchEvent(MotionEvent ev) {
-        return mDetector.onTouchEvent(ev) || super.onTouchEvent(ev);
     }
 }
